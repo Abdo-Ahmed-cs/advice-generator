@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+
+    font-family: 'Manrope';
+    font-weight: 800;
+}
+
+body {
+    background-color: var(--dark-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advice {
+    color: var(--neon-green);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 4px;
+    white-space: nowrap;
+}
+
+#quotecard {
+    background-color: var(--dark-grayish);
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    padding-bottom: 4rem;
+    border-radius: 0.5rem;
+}
+
+#quote {
+    color: white;
+    text-align: center;
+    white-space: pre-wrap;
+    font-size: 28px;
+}
+
+.button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -15px;
+    z-index: 1;
+}
+
+#btn-bg {
+    position: absolute;
+    display: inline-block;
+    padding: 1.7rem;
+    border-radius: 50%;
+    background-color: var(--neon-green);
+    z-index: -1;
+    transition: 0.25s filter;
+}
+
+.button:hover #btn-bg {
+    filter: drop-shadow(0 0 15px var(--neon-green));
+}
+
+#btn {
+    margin-top: 4px;
+}
+
+img {
+    width: 100%;
+}
+
+@media(max-width: 540px) {
+    #quotecard {
+        width: 100vw;
+        height: 40vh;
+    }
+}
+
+@media(min-width: 542px) {
+    #quotecard {
+        width: 50%;
+        height: 30vh;
+    }
+}
